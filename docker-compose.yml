@@ -1,3 +1,6 @@
+version: "3.8"
+
+services:
   mysql-db:
     image: mysql:8
     container_name: mysql-db
@@ -27,7 +30,6 @@
     restart: on-failure
     networks:
       - springboot-mysql-net
-
 
   frontend:
     image: 2300033794/frontend:latest
