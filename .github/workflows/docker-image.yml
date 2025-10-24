@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./OnlineArt
-          file: ./OnlineArt/backend.Dockerfile
+          file: ./onlineartgallery/backend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest
 
@@ -35,6 +35,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./onlineartgallery
-          file: ./onlineartgallery/frontend.Dockerfile
+          file: ./OnlineArt/frontend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest
